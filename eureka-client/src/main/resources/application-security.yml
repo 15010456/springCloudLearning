@@ -1,0 +1,13 @@
+server:
+  port: 8103 #指定运行端口
+spring:
+  application:
+    name: eureka-client #指定服务名称
+eureka:
+  client:
+    fetch-registry: true #指定是否要从注册中心获取服务（客户端需要开启）
+    register-with-eureka: true #指定是否要注册到注册中心（客户端需要开启）
+    service-url:
+      defaultZone: http://macro:123456@localhost:8004/eureka/ #eureka-client注册到有登录认证的注册中心 格式：http://${username}:${password}@${hostname}:${port}/eureka/
+  server:
+    enable-self-preservation: false #关闭保护模式
