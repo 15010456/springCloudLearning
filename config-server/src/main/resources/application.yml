@@ -1,0 +1,18 @@
+server:
+  port: 8901
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git: #?????????Git??
+          uri: https://gitee.com/macrozheng/springcloud-config.git
+          username: macro
+          password: 123456
+          clone-on-start: true #????????git????
+          search-paths: '{application}' #search-paths: '{application}'
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
