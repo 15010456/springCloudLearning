@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: ribbon-service #指定服务名称
+  zipkin:
+    base-url: http://localhost:9411
+    sleuth:
+      sampler:
+        probability: 0.1 #设置Sleuth的抽样收集概率
 eureka:
   client:
     fetch-registry: true #指定是否要从注册中心获取服务（客户端需要开启）

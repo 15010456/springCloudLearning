@@ -45,6 +45,12 @@
 			<scope>test</scope>
 		</dependency>
 
+
+		<!--Spring Cloud Sleuth：分布式请求链路跟踪-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
